@@ -1,0 +1,120 @@
+// Global variables for ease in css code
+$primary-color: #2960ff;
+$secondary-color1: #677389;
+$secondary-color2: #343843;
+$green-light: #eafcf7;
+$green: #31dfad;
+$skill-color1: #edf2fd;
+$skill-color2: #fff8e7;
+$skill-color3: #fff0ec;
+$skill-color4: #eafcf7;
+$skill-color5: #efedfe;
+
+// Configuring 'Gilroy' font globally
+@font-face {
+	font-family: "Gilroy-Bold";
+	src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2");
+}
+
+// Assigning the 'Gilroy' font globally
+body {
+	font-family: "Gilroy-Bold", sans-serif !important;
+}
+
+// Some custom helper classes
+.primary-color {
+	color: $primary-color;
+}
+.primary-bg {
+	background: $primary-color;
+}
+
+.secondary-color1 {
+	color: $secondary-color1;
+}
+.secondary-color2 {
+	color: $secondary-color2;
+}
+
+.green-light-bg {
+	background: $green-light;
+}
+.green-bg {
+	background: $green;
+}
+.skill-color-bg1 {
+	background: $skill-color1;
+}
+.skill-color-bg2 {
+	background: $skill-color2;
+}
+.skill-color-bg3 {
+	background: $skill-color3;
+}
+.skill-color-bg4 {
+	background: $skill-color4;
+}
+.skill-color-bg5 {
+	background: $skill-color5;
+}
+
+// Some essential custom styles for the page header
+#app-header {
+	z-index: 999999999999999;
+	.active-link {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 4px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			bottom: 0;
+			background: #2960ff;
+		}
+	}
+	.line {
+		width: 25px;
+		height: 3px;
+		background: #677389;
+	}
+	.close-1 {
+		width: 25px;
+		height: 3px;
+		background: #677389;
+		transform: rotate(45deg) translateY(5px);
+	}
+	.close-2 {
+		width: 25px;
+		height: 3px;
+		background: #677389;
+		transform: rotate(-45deg) translate(-3px, -2px);
+	}
+	#sidebar {
+		width: 100% !important;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		transition: all 0.4s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+		z-index: 999999999999999;
+
+		.active-sidebar-link {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 4px;
+				height: 100%;
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+				left: 0;
+				background: #2960ff;
+			}
+		}
+	}
+}
